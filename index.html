@@ -10,10 +10,10 @@
     <header class="toggle">Toggle button</header>
     <main>
       <section class="intro">
-        <p class="intro__heading">
+        <h1 class="intro__heading">
           Karla Walker is a front-end developer that enjoys designing and
           building delightful experiences for the web.
-        </p>
+        </h1>
         <nav class="intro__nav">
           <ul class="intro__nav-links">
             <li><a href="#">Projects</a></li>
@@ -71,6 +71,92 @@
           </div>
         </div>
       </section>
+
+      <section class="about">
+        <h1">About</h1>
+        <p>
+          Hello there! My name is Karla and I love creating awesome things with
+          code. I’m a self-taught (self-guided? self-driven?) web developer with
+          a passion for learning, being creative, and making impactful
+          experiences for the web. Tech is a huge part of modern life and in my
+          experince there is a lot of room for improvement. My goal is to be
+          part of the solution by building websites that are delightful and
+          created with accessibility in mind. Although I consider myself a
+          front-end developer, I enjoy web and UX design and love the challenge
+          of designing my own projects. As someone who is making a career change
+          into tech, I’m excited to be a part of a community that gets to solve
+          challenging problems with creative solutions that will impact so many
+          people! I’m currently seeking out my first role as a front-end
+          developer in an (ideally) remote position. If you’re interested,
+          please reach out at karla.walker@hey.com.
+        </p>
+        <div class="about__info">
+          <div class="about__info--facts">
+            <h2>Some facts about me:</h2>
+            <ul>
+              <li>I have 3 cats: Cash, Blue, and Tano.</li>
+              <li>I love Star Wars. Like, a lot.</li>
+              <li>My husband and I met through a video game</li>
+              <li>
+                I occasionally make time to draw. You can find my work on my
+                Instagram.
+              </li>
+              <li>
+                I love the outdoors but I also love the indoors and rainy days.
+              </li>
+              <li>
+                I’ve watched The Office 1,000+ times (not really, I’ve just lost
+                count).
+              </li>
+              <li>Disneyland is my second home.</li>
+            </ul>
+          </div>
+
+          <div class="about__info--skills">
+            <h2>My skills:</h2>
+            <p>
+              I’ve acquired all of my skills through online courses and
+              tutorials. Some of the online courses I’ve taken inlcude:
+              <a href="#">Skillcrush Break Into Tech Blueprint</a>,
+              <a href="#">Complete JavaScript Course</a> , and
+              <a href="">SuperHi</a>’s courses.
+            </p>
+            <div class="about__info--skills-box">
+              <ul>
+                <li>HTML/CSS</li>
+                <li>Sass</li>
+                <li>JavaScript</li>
+                <li>Git/GitHub</li>
+                <li>Responsive Web Design</li>
+                <li>Figma</li>
+                <li>Adobe XD</li>
+                <li>Adobe Illustrator</li>
+                <li>Adobe Photoshop</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <h1>Contact</h1>
+        <p>Interested in working together or just want to chat? You can give me a shout at <a href="mailto:karla.walker@hey.com">karla.walker@hey.com</a> or fill out the form below.:)</p>
+        <form name="contact" method="POST" data-netlify="true" action="/pages/success"">
+          <div class="contact__form-name">
+            <p><label for="name">Name:</label></p>
+            <p><input type="text" id="name"></p>
+          </div>
+          <div class="contact__form-email">
+            <p><label for="email">Email:</label></p>
+            <p><input type="email" id="email"></p>
+          </div>
+          <div class="contact__form-text">
+            <p><label for="message">Message:</label></p>
+            <p><textarea id="message" cols="30" rows="10"></textarea></p>
+          </div>
+        </form>
+      </section>
     </main>
+    
   </body>
 </html>
