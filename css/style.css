@@ -1,0 +1,36 @@
+/******
+Note: create night mode
+      add toggle icon
+      work on copy
+
+******/
+
+/* simple reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/*** header styles ***/
+header {
+  padding-top: 3.13rem;
+  margin: 0 auto;
+  width: 80%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
