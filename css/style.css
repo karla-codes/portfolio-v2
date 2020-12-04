@@ -13,24 +13,91 @@ Note: create night mode
   box-sizing: border-box;
 }
 
+/*** base styles ***/
+html {
+  font-size: 100%;
+}
+
 body {
   background-color: #ffffff;
   color: #000000;
   font-family: "Karla", sans-serif;
-  font-size: 16px;
   min-height: 100vh;
 
   display: flex;
   flex-direction: column;
 }
 
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: #000000;
+}
+
 /*** header styles ***/
 header {
   padding-top: 3.13rem;
   margin: 0 auto;
-  width: 80%;
+  width: 85%;
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+/*** intro styles ***/
+.intro {
+  margin: 5rem auto 0 auto;
+  width: 85%;
+}
+
+.intro .intro__heading {
+  font-size: 2.25rem;
+  line-height: 110%;
+}
+
+nav.intro__nav {
+  font-size: 1.125rem;
+  margin-top: 2.8rem;
+}
+
+nav .intro__nav-links,
+nav .intro__nav-social {
+  list-style: none;
+}
+
+nav .intro__nav-links li {
+  padding: 5px;
+}
+
+nav .intro__nav-contact {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 12px;
+}
+
+nav .intro__nav-contact .email-link {
+  color: #0c6cfd;
+}
+
+nav .intro__nav-social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 11rem;
+  margin-top: 1rem;
+}
+
+nav .intro__nav-social li {
+  width: 2.5rem;
+  padding: 0 16px 0 0;
+}
+
+nav .intro__nav-social svg {
+  width: 100%;
 }
