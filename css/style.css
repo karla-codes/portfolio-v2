@@ -42,6 +42,7 @@ a:active {
 
 h1 {
   font-size: 2.375rem;
+  margin-bottom: 2rem;
 }
 
 /*** header styles ***/
@@ -115,10 +116,6 @@ nav .intro__nav-social svg {
   width: 85%;
 }
 
-.projects__title {
-  margin: 0 auto 2rem auto;
-}
-
 .projects__grid {
   margin: 3.125rem auto 0 auto;
 
@@ -166,4 +163,49 @@ nav .intro__nav-social svg {
   margin-right: 1.8rem;
   padding-bottom: 3px;
   border-bottom: solid 1px rgb(70, 70, 70);
+}
+
+.about {
+  margin: 12.5rem auto 0 auto;
+  width: 85%;
+}
+
+.about img {
+  width: 100%;
+  margin: 2.5rem auto;
+}
+
+.about__info {
+  width: 85%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about__info ul {
+  list-style: "- ";
+}
+
+.about__info ul li {
+  padding-bottom: 10px;
+}
+
+.about__info--facts h2,
+.about__info--skills h2 {
+  margin-bottom: 1.25rem;
+}
+
+.about__info--facts,
+.about__info--skills p {
+  text-align: left;
+}
+
+.about__info--skills {
+  margin-top: 3.25rem;
+}
+
+.about__info--skills-box {
+  margin-top: 1.25rem;
 }
