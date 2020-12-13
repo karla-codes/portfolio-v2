@@ -56,6 +56,17 @@ header {
   justify-content: space-between;
 }
 
+#dark-mode {
+  font-family: "Karla", sans-serif;
+  font-size: 1.125rem;
+  width: 7.75rem;
+  height: 2.813rem;
+  padding: 8px;
+  background-color: #000000;
+  color: #f8f8f8;
+  border: none;
+}
+
 /*** intro styles ***/
 .intro {
   margin: 5rem auto 0 auto;
@@ -68,7 +79,6 @@ header {
 }
 
 nav.intro__nav {
-  /* font-size: 1.125rem; */
   margin-top: 2.8rem;
 }
 
@@ -134,11 +144,8 @@ nav .intro__nav-social svg {
 
 .projects__grid-item--description {
   padding: 2rem;
-  border-left: 10px solid #0c6cfd;
-  border-top: 6px solid #e6e6e6;
-  border-right: 6px solid rgba(244, 244, 244, 0.023);
-  border-bottom: 10px solid #e6e6e6e6;
-  background-color: #ffffff;
+  border: 2px solid #000;
+  background-color: #f8f8f8;
 }
 
 .projects__grid-item:not(:last-child) {
@@ -208,4 +215,60 @@ nav .intro__nav-social svg {
 
 .about__info--skills-box {
   margin-top: 1.25rem;
+}
+
+/***** Contact stylee *****/
+
+.contact {
+  margin: 12.5rem auto 0 auto;
+  width: 85%;
+}
+
+form {
+  margin: 2rem auto 0 auto;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+form div p:first-child {
+  margin-bottom: 12px;
+}
+
+form div {
+  margin-bottom: 1.5rem;
+}
+
+form input,
+form textarea {
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  color: #000000;
+  background-color: #f2f2f2;
+  border: 1px solid #000000;
+  padding: 6px;
+}
+
+form input {
+  height: 2.5rem;
+  width: 80%;
+}
+
+form textarea {
+  width: 100%;
+}
+
+form button {
+  width: 14.375rem;
+  height: 3.75rem;
+  margin: 5px auto 0;
+
+  font-family: "Karla", sans-serif;
+  font-size: 1.875rem;
+  color: #000000;
+  background-color: #f2f2f2;
+  border: 3px solid #000000;
+  border-radius: 10px;
 }

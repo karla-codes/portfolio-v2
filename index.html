@@ -15,13 +15,7 @@
         <!-- <img src="" alt=""> -->
       </div>
       <div class="toggle">
-        <svg width="62" height="34" viewBox="0 0 62 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="1" y="1" width="60" height="32" rx="16" fill="#FE46A5" stroke="black" stroke-width="2"/>
-          <circle cx="18.1458" cy="17.1458" r="11.9167" fill="#F7E334" stroke="black" stroke-width="2"/>
-          <circle cx="22.0208" cy="13.2708" r="1.29167" fill="black"/>
-          <path d="M24.6041 17.7917C24.6041 21.3585 21.7126 24.25 18.1458 24.25C14.5789 24.25 11.6874 21.3585 11.6874 17.7917" stroke="black" stroke-width="2"/>
-          <circle cx="14.2708" cy="13.2708" r="1.29167" fill="black"/>
-          </svg>
+        <button type="button" id="dark-mode">Dark Mode</button>
       </div>
     </header>
     <main>
@@ -180,6 +174,7 @@
       <section class="contact">
         <h1>Contact</h1>
         <p>Interested in working together or just want to chat? You can give me a shout at <a href="mailto:karla.walker@hey.com" class="email-link">karla.walker@hey.com</a> or fill out the form below.:)</p>
+        
         <form name="contact" method="POST" data-netlify="true" action="/pages/success"">
           <div class="contact__form-name">
             <p><label for="name">Name&#58;</label></p>
@@ -191,8 +186,9 @@
           </div>
           <div class="contact__form-text">
             <p><label for="message">Message&#58;</label></p>
-            <p><textarea id="message" cols="30" rows="10"></textarea></p>
+            <p><textarea id="message" cols="30" rows="6"></textarea></p>
           </div>
+          <button type="submit">Submit</button>
         </form>
       </section>
     </main>
