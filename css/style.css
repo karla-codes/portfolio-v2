@@ -3,8 +3,14 @@ Note: create night mode
       add toggle icon
       work on copy
       fill in link address
+      add animations
 
 ******/
+
+@font-face {
+  src: url(../assets/Supply-Regular.woff2), url(../assets/Supply-Regular.woff);
+  font-family: "Supply";
+}
 
 /* simple reset */
 
@@ -20,8 +26,8 @@ html {
 }
 
 body {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #f5f4f0;
+  color: #000133;
   font-family: "Karla", sans-serif;
   font-size: 1.125rem;
   line-height: 122%;
@@ -33,16 +39,27 @@ body {
 
 a:link,
 a:visited,
-a:hover,
 a:focus,
 a:active {
   text-decoration: none;
   color: #000000;
+  font-family: "Supply";
+  font-size: 1rem;
+}
+
+a:hover {
+  border-bottom: solid 3px #fd3c07;
 }
 
 h1 {
   font-size: 2.375rem;
   margin-bottom: 2rem;
+}
+
+.projects h1,
+.about h1,
+.contact h1 {
+  text-transform: uppercase;
 }
 
 /*** header styles ***/
@@ -54,6 +71,10 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.logo img {
+  width: 50px;
 }
 
 #dark-mode {
@@ -69,55 +90,19 @@ header {
 
 /*** intro styles ***/
 .intro {
-  margin: 5rem auto 0 auto;
+  margin: 3rem auto 0 auto;
   width: 85%;
+  height: 100vh;
 }
 
 .intro .intro__heading {
-  font-size: 2.25rem;
+  font-size: 2.35rem;
   line-height: 110%;
 }
 
-nav.intro__nav {
-  margin-top: 2.8rem;
-}
-
-nav .intro__nav-links,
-nav .intro__nav-social {
-  list-style: none;
-}
-
-nav .intro__nav-links li {
-  padding: 5px;
-}
-
-nav .intro__nav-contact {
-  display: flex;
-  flex-direction: column;
-
-  margin-top: 12px;
-}
-
-nav .intro__nav-contact .email-link {
-  color: #0c6cfd;
-}
-
-nav .intro__nav-social {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 11rem;
-  margin-top: 1rem;
-}
-
-nav .intro__nav-social li {
-  width: 2.5rem;
-  padding: 0 16px 0 0;
-}
-
-nav .intro__nav-social svg {
-  width: 100%;
+.scroll-icon {
+  position: absolute;
+  bottom: 1.5rem;
 }
 
 /*** projects styles ***/
@@ -133,22 +118,17 @@ nav .intro__nav-social svg {
   flex-direction: column;
 }
 
-.projects__grid-item--img {
-  display: none;
-}
-
 .grid-item-box {
   width: 100%;
-  max-height: 12.5rem;
-}
+  min-height: 12.5rem;
 
-.projects__grid-item--description {
   padding: 2rem;
-  border: 2px solid #000;
-  background-color: #f8f8f8;
+  border: 3px solid #000;
+  background-color: #ffeba6;
+  box-shadow: 9px 9px 0 #000000;
 }
 
-.projects__grid-item:not(:last-child) {
+.grid-item-box:not(:last-child) {
   margin-bottom: 3.125rem;
 }
 
@@ -166,15 +146,18 @@ nav .intro__nav-social svg {
   width: 100%;
 }
 
-.projects__grid-item--links a {
+.projects__grid-item--links a:not(:last-child) {
   margin-right: 1.8rem;
   padding-bottom: 3px;
-  border-bottom: solid 1px rgb(70, 70, 70);
 }
 
 .about {
   margin: 12.5rem auto 0 auto;
   width: 85%;
+}
+
+.about p:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
 .about img {
@@ -183,7 +166,7 @@ nav .intro__nav-social svg {
 }
 
 .about__info {
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
 
   display: flex;
@@ -193,9 +176,10 @@ nav .intro__nav-social svg {
 
 .about__info ul {
   list-style: "- ";
+  padding-left: 1rem;
 }
 
-.about__info ul li {
+.about__info ul li:not(:last-child) {
   padding-bottom: 10px;
 }
 
@@ -214,7 +198,12 @@ nav .intro__nav-social svg {
 }
 
 .about__info--skills-box {
+  font-family: "Supply";
   margin-top: 1.25rem;
+  background-color: #ffeba6;
+  border: 3px solid #000;
+  box-shadow: 9px 9px 0 #000;
+  padding: 2rem;
 }
 
 /***** Contact stylee *****/
@@ -224,51 +213,35 @@ nav .intro__nav-social svg {
   width: 85%;
 }
 
-form {
-  margin: 2rem auto 0 auto;
-  width: 100%;
+.contact__links {
+  margin-top: 2.5rem;
+  list-style: none;
+}
 
+.contact__links li {
+  padding-bottom: 10px;
+}
+
+/***** Footer styles *****/
+footer {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-form div p:first-child {
-  margin-bottom: 12px;
-}
-
-form div {
-  margin-bottom: 1.5rem;
-}
-
-form input,
-form textarea {
-  font-family: "Karla", sans-serif;
-  font-size: 1rem;
-  color: #000000;
-  background-color: #f2f2f2;
-  border: 1px solid #000000;
-  padding: 6px;
-}
-
-form input {
-  height: 2.5rem;
-  width: 80%;
-}
-
-form textarea {
+  align-items: center;
+  font-size: 0.875rem;
+  line-height: 115%;
   width: 100%;
+  min-height: 5.6rem;
+  margin: 5rem auto 0;
+  border-top: 3px solid #000;
+  background-color: #ffeba6;
+  vertical-align: middle;
 }
 
-form button {
-  width: 14.375rem;
-  height: 3.75rem;
-  margin: 5px auto 0;
+footer p {
+  width: 85%;
+  margin: 1rem auto;
+  text-align: center;
+}
 
-  font-family: "Karla", sans-serif;
-  font-size: 1.875rem;
-  color: #000000;
-  background-color: #f2f2f2;
-  border: 3px solid #000000;
-  border-radius: 10px;
+footer span {
+  text-decoration: line-through;
 }
