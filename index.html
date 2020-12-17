@@ -23,6 +23,7 @@
     </header>
     <main>
       <section class="intro">
+        <p id="greeting">Good morning!</p>
         <h1 class="intro__heading">
           I'm Karla Walker, a front-end developer that enjoys designing and
           building delightful experiences for the web.
@@ -30,14 +31,6 @@
         <a href="mailto:karla.walker@hey.com" class="email-link"
           >karla.walker@hey.com</a
         >
-        <div class="scroll-icon">
-          <div class="scroll">
-            <p>Scroll</p>
-          </div>
-          <div class="pointer">
-            <span></span>
-          </div>
-        </div>
       </section>
 
       <section class="projects">
@@ -49,29 +42,53 @@
 
         <div class="projects__grid">
           <div class="grid-item-box">
-            <h2 class="projects__grid-item--title">Project name</h2>
-            <p>An app created with HTML, CSS and JavaScript</p>
-            <div class="projects__grid-item--links">
-              <a href="#">View Project</a>
-              <a href="#">Live site</a>
+            <div class="projects__img">
+              <img src="/assets/image-1.jpg" alt="" />
+            </div>
+            <div class="grid-item-info">
+              <h2 class="projects__grid-item--title">Project name</h2>
+              <p>
+                An app created with HTML, CSS and JavaScript. Project
+                description goes here. Keep it short but enticing.
+              </p>
+              <div class="projects__grid-item--links">
+                <a href="#">View Project</a>
+                <a href="#">Live site</a>
+              </div>
             </div>
           </div>
 
           <div class="grid-item-box">
-            <h2 class="projects__grid-item--title">Project name</h2>
-            <p>An app created with HTML, CSS and JavaScript</p>
-            <div class="projects__grid-item--links">
-              <a href="#">View Project</a>
-              <a href="#">Live site</a>
+            <div class="projects__img">
+              <img src="/assets/image-2.jpg" alt="" />
+            </div>
+            <div class="grid-item-info">
+              <h2 class="projects__grid-item--title">Project name</h2>
+              <p>
+                An app created with HTML, CSS and JavaScript. Project
+                description goes here. Keep it short but enticing.
+              </p>
+              <div class="projects__grid-item--links">
+                <a href="#">View Project</a>
+                <a href="#">Live site</a>
+              </div>
             </div>
           </div>
 
           <div class="grid-item-box">
-            <h2 class="projects__grid-item--title">Project name</h2>
-            <p>An app created with HTML, CSS and JavaScript</p>
-            <div class="projects__grid-item--links">
-              <a href="#">View Project</a>
-              <a href="#">Live site</a>
+            <div class="projects__img">
+              <img src="/assets/image-3.jpg" alt="" />
+            </div>
+            <div class="grid-item-info">
+              <h2 class="projects__grid-item--title">Project name</h2>
+              <p>
+                An app created with HTML, CSS and JavaScript. Project
+                description goes here. Keep it short but enticing.
+              </p>
+              <div class="projects__grid-item--links">
+                <a href="#">View Project</a>
+                <a href="#">Live site</a>
+              </div>
             </div>
           </div>
         </div>
@@ -79,49 +96,56 @@
 
       <section class="about">
         <h1>About</h1>
-        <p>
-          Hello there! My name is Karla and I love creating awesome things with
-          code. I’m a self-taught (self-guided? self-driven?) web developer with
-          a passion for learning, being creative, and making impactful
-          experiences for the web. Tech is a huge part of modern life and in my
-          experince there is a lot of room for improvement. My goal is to be
-          part of the solution by building websites that are delightful and
-          created with accessibility in mind.
-        </p>
-        <p>
-          Although I consider myself a front-end developer, I also enjoy web and
-          UX design and love the challenge of designing my own projects. As
-          someone who is making a career change into tech, I’m excited to be a
-          part of a community that gets to solve challenging problems with
-          creative solutions that will impact so many people!
-        </p>
-        <p>
-          I’m currently seeking out my first role as a front-end developer in an
-          (ideally) remote position. If you’re interested, please reach out at
-          <a href="mailto:karla.walker@hey.com">karla.walker@hey.com</a>.
-        </p>
+        <div class="about__text">
+          <p>
+            Hello there! My name is Karla and I love creating awesome things
+            with code. I’m a self-taught (self-guided? self-driven?) web
+            developer with a passion for learning, being creative, and making
+            impactful experiences for the web. Tech is a huge part of modern
+            life and in my experince there is a lot of room for improvement. My
+            goal is to be part of the solution by building websites that are
+            delightful and created with accessibility in mind.
+          </p>
+          <p>
+            Although I consider myself a front-end developer, I also enjoy web
+            and UX design and love the challenge of designing my own projects.
+            As someone who is making a career change into tech, I’m excited to
+            be a part of a community that gets to solve challenging problems
+            with creative solutions that will impact so many people!
+          </p>
+          <p>
+            I’m currently seeking out my first role as a front-end developer in
+            an (ideally) remote position. If you’re interested, please reach out
+            at
+            <a href="mailto:karla.walker@hey.com">karla.walker@hey.com</a>.
+          </p>
+        </div>
+
         <img src="/assets/selfie.jpg" alt="Image of Karla Walker" />
 
         <div class="about__info">
           <div class="about__info--facts">
             <h2>Some facts about me:</h2>
-            <ul>
-              <li>I have 3 cats: Cash, Blue, and Tano.</li>
-              <li>I love Star Wars. Like, a lot.</li>
-              <li>My husband and I met through a video game</li>
-              <li>
-                I occasionally make time to draw. You can find my work on my
-                Instagram.
-              </li>
-              <li>
-                I love the outdoors but I also love the indoors and rainy days.
-              </li>
-              <li>
-                I’ve watched The Office 1,000+ times (not really, I’ve just lost
-                count).
-              </li>
-              <li>Disneyland is my second home.</li>
-            </ul>
+            <div class="facts-box">
+              <ul>
+                <li>I have 3 cats: Cash, Blue, and Tano.</li>
+                <li>I love Star Wars. Like, a lot.</li>
+                <li>My husband and I met through a video game</li>
+                <li>
+                  I occasionally make time to draw. You can find my work on my
+                  Instagram.
+                </li>
+                <li>
+                  I love the outdoors but I also love the indoors and rainy
+                  days.
+                </li>
+                <li>
+                  I’ve watched The Office 1,000+ times (not really, I’ve just
+                  lost count).
+                </li>
+                <li>Disneyland is my second home.</li>
+              </ul>
+            </div>
           </div>
 
           <div class="about__info--skills">
@@ -133,7 +157,7 @@
               <a href="#">Complete JavaScript Course</a> , and
               <a href="">SuperHi</a>’s courses.
             </p>
-            <div class="about__info--skills-box">
+            <div class="skills-box">
               <ul>
                 <li>HTML/CSS</li>
                 <li>Sass</li>
