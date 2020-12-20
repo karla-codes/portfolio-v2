@@ -4,6 +4,7 @@ Note: create night mode
       work on copy
       fill in link address
       add animations
+      create svg animation for logo/make icon say time of day
 
 ******/
 
@@ -28,6 +29,7 @@ html {
 body {
   background-color: #f5f4f0;
   color: #000133;
+  /* font-family: "Cabin", sans-serif; */
   font-family: "Karla", sans-serif;
   font-size: 1.125rem;
   line-height: 122%;
@@ -63,6 +65,7 @@ h1 {
   display: inline-block;
   text-transform: uppercase;
   border-bottom: 3px solid #fd3c07;
+  padding-top: 1rem;
   padding-bottom: 0.5rem;
 }
 
@@ -77,8 +80,31 @@ header {
   justify-content: space-between;
 }
 
+.logo {
+  display: flex;
+  width: 60px;
+}
+
 .logo img {
-  width: 50px;
+  width: 100%;
+}
+
+.menu a:link,
+.menu a:visited,
+.menu a:focus,
+.menu a:active {
+  font-family: "Karla", sans-serif;
+  color: #000133;
+  text-decoration: underline;
+}
+
+.menu ul {
+  list-style: none;
+  text-align: right;
+}
+
+.menu ul li:not(:last-child) {
+  padding-bottom: 5px;
 }
 
 #dark-mode {
@@ -96,23 +122,23 @@ header {
 .intro {
   margin: 4rem auto 0 auto;
   width: 85%;
-  height: 100vh;
+  /* display: flex; */
+  /* flex-direction: column; */
 }
 
-#greeting {
-  margin-bottom: 0.5rem;
-  font-size: 1.125rem;
+.name {
+  margin-bottom: 1rem;
+  font-size: 2rem;
 }
 
-.intro .intro__heading {
-  font-size: 2.35rem;
+.intro__heading {
+  font-size: 1.6rem;
   line-height: 110%;
   font-weight: 300;
+  margin-bottom: 1rem;
 }
 
-.scroll-icon {
-  position: absolute;
-  bottom: 1.5rem;
+.intro .email-link {
 }
 
 /*** projects styles ***/
@@ -188,19 +214,30 @@ header {
   width: 85%;
 }
 
+.about__box {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__text {
+  width: 100%;
+}
+
 .about__text p:not(:last-child) {
   margin-bottom: 1rem;
 }
 
 .about img {
-  width: 100%;
-  margin: 2.5rem auto;
+  display: flex;
+  width: 90%;
+  margin: 3rem auto;
+  border-radius: 50%;
 }
 
 .about__info {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 5rem auto;
 }
 
 .about__info ul {
@@ -208,7 +245,7 @@ header {
   padding-left: 1rem;
 }
 
-.about__info ul li:not(:last-child) {
+.about__info ul li {
   padding-bottom: 10px;
 }
 
@@ -226,22 +263,26 @@ header {
 }
 
 .about__info--skills {
-  margin-top: 3.25rem;
+  margin-top: 4rem;
 }
 
-.facts-box {
+.facts-box,
+.skills-box {
   max-width: 39.375rem;
 }
 
 .skills-box {
-  max-width: 25rem;
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
+  justify-content: space-between;
 }
 
 .facts-box,
 .skills-box {
   font-family: "Supply";
+  font-size: 1rem;
   margin: 2rem auto 0 auto;
-  /* background-color: #ffeba6; */
   border: 3px solid #000;
   box-shadow: 9px 9px 0 #000;
   padding: 2rem;
@@ -284,4 +325,106 @@ footer p {
 
 footer span {
   text-decoration: line-through;
+}
+
+/********** Media Queries **********/
+
+@media screen and (min-width: 600px) {
+  .intro .name {
+    font-size: 2.4rem;
+  }
+
+  .intro__heading {
+    font-size: 2rem;
+  }
+
+  .about img {
+    width: 70%;
+  }
+
+  .skills-box {
+    padding: 2rem 4rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .intro {
+    margin-top: 6rem;
+  }
+
+  .intro,
+  .projects,
+  .about,
+  .contact {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .intro__heading,
+  .contact p {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .intro,
+  .projects,
+  .about,
+  .contact {
+    max-width: 64rem;
+  }
+
+  .intro {
+    margin-top: 6.6rem;
+  }
+
+  .intro__heading {
+    width: 70%;
+  }
+
+  .projects__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    /* flex-direction: row;
+    flex-flow: wrap; */
+    /* justify-content: space-evenly; */
+  }
+
+  .grid-item-box {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .about__box {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .about__text {
+    width: 50%;
+  }
+
+  .about img {
+    width: 40%;
+    margin: 0;
+  }
+
+  .about__info {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 8rem;
+  }
+
+  .about__info--facts,
+  .about__info--skills {
+    width: 45%;
+    margin: 0;
+  }
+
+  .contact p {
+    width: 60%;
+  }
 }
